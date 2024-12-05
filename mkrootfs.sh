@@ -28,6 +28,10 @@ qemu-system-x86_64 \
     -net user,hostfwd=tcp::10022-:22 \
     -s
 
+# After the instance is started, it can be logged in with root user, no password is required.
+# The instance can be shut down by 'poweroff'. 'halt' will also shut down it but it won't stop
+# the instance completely.
+
 
 # To start network inside the qemu instance (guest):
 # $ ifconfig -a
@@ -40,3 +44,4 @@ qemu-system-x86_64 \
 # $ /etc/init.d/S50sshd restart
 #
 # from host, do 'ssh -p 10022 root@localhost'
+#
