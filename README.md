@@ -35,6 +35,15 @@ $ cd ~/srcs/linux
 $ gdb vmlinux -ex 'target remote localhost:1234'
 ```
 
+If this kind of error message is seen:
+```text
+Python Exception <class 'AttributeError'>: module 'linux.constants' has no attribute 'LX_CONFIG_DEBUG_INFO_REDUCED'
+```
+it can be fixed by running:
+```bash
+$ make scripts_gdb
+```
+
 # References
 - https://www.josehu.com/memo/2021/01/02/linux-kernel-build-debug.html
 - https://www.starlab.io/blog/using-gdb-to-debug-the-linux-kernel
